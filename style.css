@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #f3f0fb; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.grid-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(7, 70px);
+  grid-template-rows: repeat(6, 70px);
+  gap: 5px;
+  background-color: #5e3c99;
+  padding: 10px;
+  border: 5px solid #5e3c99;
+  border-radius: 10px;
+}
+
+.cell {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cell::before {
+  content: '';
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: block;
+  transition: background-color 0.2s;
+}
+
+.cell.red::before {
+  background-color: #e74c3c;
+}
+
+.cell.yellow::before {
+  background-color: #f1c40f;
+}
+#reset-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #999;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+#reset-btn:hover {
+  background-color: #f0f0f0;
+}
